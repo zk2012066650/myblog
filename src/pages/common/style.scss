@@ -1,0 +1,56 @@
+@import "@/styles/mixin.scss";
+@import "@/styles/animation.scss";
+
+.common {
+    @include wh;
+    // background: url("./34a6d1b6b37aa812c03aa0c99d6c4edb.jpg") center top no-repeat;
+    // 头部
+    .header {
+        position: fixed;
+        @extend %fixed-top-left;
+        @extend %margin-center;
+        background-size: contain;
+        @include wh(100%, 100vh);
+        // 欢迎滚动条
+        .welcome {
+            background: rgba($color: #000000, $alpha: 0.1);
+            position: relative;
+            @include wh(100%, 38px);
+            @extend%flex-row-center;
+            span {
+                color: #fff;
+                font-weight: bold;
+                white-space: nowrap;
+                position: absolute;
+                animation: moveLeftToRight 15s infinite cubic-bezier(0,-0.02,1,.99);
+                -webkit-animation: moveLeftToRight 15s infinite cubic-bezier(0,-0.02,1,.99); /* Safari 与 Chrome */
+            }
+        }
+        // 导航部分
+        .navigation {
+            @include wh(1080px,48px);
+            @extend %flex-row-around;
+            @extend %margin-center;
+            font-size: 18px;
+            font-weight: bold;
+            .item {
+                flex: 1;
+                text-align: center;
+                color: $ant-warning-color-hover;
+            }
+            .item-Actived {
+                flex: 1;
+                text-align: center;
+                color: $ant-warning-color-active;
+            }
+
+        }
+    }
+    // 底部
+    .footer {
+        @include color(green);
+        @extend %fixed-bottom-center;
+        @include wh(1080px,fit-content);
+        background-color: aquamarine;
+    }
+}

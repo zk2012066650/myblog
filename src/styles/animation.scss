@@ -1,0 +1,20 @@
+// #region  ----------------------------------------    ----------------------------------------
+
+@keyframes moveLeftToRight {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+@-webkit-keyframes moveLeftToRight /* Safari 与 Chrome */ {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100%;
+    }
+}
+// #endregion

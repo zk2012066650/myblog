@@ -1,0 +1,9 @@
+@import "@/styles/mixin.scss";
+@import "@/styles/animation.scss";
+@import "@/pages/common/style.scss";
+.home{
+    // 内容
+    .content {
+        min-height: 100vh;
+    }
+}
